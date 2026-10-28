@@ -1,14 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
-  turbopack: {
-    rules: {
-      "*.css": {
-        loaders: ["@tailwindcss/turbopack"],
-        as: "*.css",
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "qhxlwihazoqljmgyeawh.supabase.co",
+        pathname: "/storage/v1/object/public/cabin-images/**",
       },
-    },
+    ],
   },
+  // output: "export",
 };
 
 export default nextConfig;
